@@ -1,18 +1,13 @@
-This project is for completion for the course System Integration and Architecture 1.
-This is my second project using Nodejs and express js. So a lot of loop holes are visible here but I still considered this project as successfull, because man, I'm a full beginner.
-
-The tech stack used:
+This project if for completion for the course Advance Database System at my Third year in college. This is a group project but I've created all the stuffs here. :>
+Tech stack used:
 Nodejs for backend
-Expressjs for server side
-Mongodb for database
-EJS as view engine
-CSS, Bootstrap and JS for design
+Expressjs for server
+MySQL Workbench for Database
 
 Modules:
-Axios for fast api fetching
-Mongoose for mongodb 
+twilio api for SMS message integration
+brcypt for password hashed
+mysqli
+mysql2 for db
 env
-btcryp for password hashed
-jwt for web token
-joi for input validation
-
+session-express for session tracking
