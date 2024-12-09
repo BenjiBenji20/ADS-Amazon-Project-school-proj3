@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar{
+  width: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  background-color: #ddd;
+  font-size: 14px;
+}
+
+.container {
+  background-color: #fff;
+  width: 765px;
+  max-width: 100vw;
+  height: 480px;
+  position: relative;
+  top: 75px;
+  overflow-x: hidden;
+  padding: 0 0;
+  margin: 0 auto; /* Center the container horizontally */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for better appearance */
+}
+.container .forms-container {
+  position: relative;
+  width: 50%;
+  text-align: center;
+}
+#reg-form{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+.left-reg-form {
+  margin-right: 20px;
+}
+#reg-form > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+#reg-form > div > input{
+  width: 100%;
+  height: 3rem;
+  font-size: 14px;
+  padding: 5px;
+}
+
+#submit-reg{
+  position: absolute;
+  top: 22rem;
+  padding: 10px;
+}
+.container .forms-container .form-control {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 480px;
+  transition: all 0.5s ease-in;
+}
+.container .forms-container .form-control h2 {
+  font-size: 2rem;
+}
+.container .forms-container .form-control form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+.container .forms-container .form-control form input {
+  margin: 10px 0px;
+  border: none;
+  padding: 15px;
+  background-color: #efefef;
+  border-radius: 5px;
+}
+.container .forms-container .form-control form button {
+  border: none;
+  padding: 20px;
+  margin-top: 5px;
+  background-color: #059669;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+.container .forms-container .form-control form button:focus {
+  outline: none;
+}
+.container .forms-container .form-control span {
+  margin: 10px 0px;
+}
+.container .forms-container .form-control .socials i {
+  margin: 0 5px;
+  border: 1px solid black;
+  color: #fff;
+  border-radius: 50%;
+}
+.container .forms-container .form-control .socials .fa-facebook-f {
+  padding: 5px 8px;
+  background-color: #3b5998;
+}
+.container .forms-container .form-control .socials .fa-google-plus-g {
+  padding: 5px 4px;
+  background-color: #db4a39;
+}
+.container .forms-container .form-control .socials .fa-linkedin-in {
+  padding: 5px 6px;
+  background-color: #0e76a8;
+}
+.container .forms-container .form-control.signup-form {
+  opacity: 0;
+  z-index: 1;
+  left: 200%;
+}
+.container .forms-container .form-control.signin-form {
+  opacity: 1;
+  z-index: 2;
+  left: 0%;
+}
+.container .intros-container {
+  position: relative;
+  left: 50%;
+  width: 50%;
+  text-align: center;
+}
+.container .intros-container .intro-control {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 480px;
+  color: #fff;
+  background: linear-gradient(170deg, #f0a047, #FFC267 );
+  transition: all 0.5s ease-in;
+}
+.container .intros-container .intro-control .intro-control__inner {
+  margin: 0px 30px;
+}
+.container .intros-container .intro-control button {
+  border: none;
+  padding: 15px 30px;
+  background-color: #FFC267;
+  border-radius: 50px;
+  color: #fff;
+  margin: 10px 0px;
+  cursor: pointer;
+}
+.container .intros-container .intro-control button:focus, .container .intros-container .intro-control button:hover {
+  outline: none;
+  background-color: #f0a047;
+}
+.container .intros-container .intro-control button:focus, .container .intros-container .intro-control button:active {
+  background-color: #FFC267;
+}
+
+.container .intros-container .intro-control h3,
+.container .intros-container .intro-control p {
+  margin: 10px 0px;
+}
+.container .intros-container .intro-control.signin-intro {
+  opacity: 1;
+  z-index: 2;
+}
+.container .intros-container .intro-control.signup-intro {
+  opacity: 0;
+  z-index: 1;
+}
+
+.change .forms-container .form-control.signup-form {
+  opacity: 1;
+  z-index: 2;
+  transform: translateX(-100%);
+}
+.change .forms-container .form-control.signup-form button {
+  background-color: #2563eb !important;
+}
+.change .forms-container .form-control.signin-form {
+  opacity: 0;
+  z-index: 1;
+  transform: translateX(-100%);
+}
+.change .intros-container .intro-control {
+  transform: translateX(-100%);
+  background: linear-gradient(170deg, #42628d, #232F3F);
+}
+.change .intros-container .intro-control #signin-btn {
+  background-color: #232F3F;
+}
+
+.change .intros-container .intro-control #signin-btn:hover {
+  background-color: #3a5579;
+}
+
+.change .intros-container .intro-control #signin-btn:active {
+  background-color: #232F3F;
+}
+
+.change .intros-container .intro-control.signin-intro {
+  opacity: 0;
+  z-index: 1;
+}
+.change .intros-container .intro-control.signup-intro {
+  opacity: 1;
+  z-index: 2;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .container .forms-container {
+    order: 2;
+    width: 100%;
+    height: 50vh;
+  }
+  .container .forms-container .form-control {
+    position: absolute;
+    height: 50vh;
+  }
+  .container .forms-container .form-control.signup-form {
+    left: 0%;
+    margin-top: 70px;
+  }
+  .container .intros-container {
+    order: 1;
+    width: 100%;
+    left: 0%;
+    height: 40vh;
+  }
+  .container .intros-container .intro-control {
+    position: absolute;
+    height: 40vh;
+  }
+
+  .change .forms-container .form-control.signup-form {
+    transform: translateX(0%);
+  }
+  .change .forms-container .form-control.signin-form {
+    transform: translateX(0%);
+  }
+  .change .intros-container .intro-control {
+    transform: translateX(0%);
+  }
+}
+
+.error-message {
+  color: red;
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+#error-messages {
+  position: relative;
+  top: -50px;
+}
+

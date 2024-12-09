@@ -1,0 +1,185 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0a047;
+  padding: 5px 250px;
+  width: 100%;
+}
+
+.header > .category-tab {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  max-width: 30vw;
+  height: 2.5rem;
+  padding-top: 5px;
+}
+
+.header > .category-tab > .icon{
+  position: absolute;
+  top: 0;
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.icon:first-child {
+  left: 0;
+  display: none;
+  background: linear-gradient(90deg, #f0a047 70%, transparent);
+}
+.icon:last-child {
+  right: 0;
+  justify-content: flex-end;
+  background: linear-gradient(-90deg, #f0a047 70%, transparent);
+}
+
+.icon i {
+  cursor: pointer;
+  color: lightgray;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 10%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.icon i:hover {
+  background-color: #f9b66a;
+  color: rgb(85, 85, 85);
+}
+
+.header > .category-tab > .tabs-container {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.header > .category-tab > .tabs-container.dragging {
+  scroll-behavior: auto;
+  cursor: grab;
+}
+
+.header > .category-tab > .tabs-container > .tab {
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: black;
+  white-space: nowrap;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.header > .category-tab > .tabs-container > .tab:hover {
+  background-color: #f9b66a;
+  color: rgb(56, 55, 55);
+}
+
+.header > .category-tab > .tabs-container.dragging > .tab {
+  user-select: none;
+  pointer-events: none;
+}
+
+.header > .category-tab > .tabs-container > .tab.active {
+  color: white;
+  background-color: #f9b66a;
+  border-color: transparent;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #fbd09f;
+  border-radius: 25px;
+  padding: 5px 10px;
+  width: 40%;
+}
+
+.bi-filter {
+  font-size: 1.5rem;
+  color: 0000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.search-bar .search-input {
+  flex-grow: 1;
+  font-size: 15px;
+  color: black;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background-color: #fbd09f;
+  margin-right: 10px;
+}
+
+.search-bar .divider {
+  height: 24px;
+  width: 1px;
+  background-color: #ffff;
+  margin: 0 10px;
+}
+
+#search-icon {
+  cursor: pointer;
+}
+
+.header > .search-bar > .filter > .inputs {
+  position: absolute;
+  right: 700px;
+  top: 100px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  z-index: 1000;
+  display: none;
+  padding: 0.5rem;
+  background-color: #fefcfc;
+}
+
+.header > .search-bar > .filter > .inputs > .min-input, .max-input {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  font-size: 15px;
+  user-select: none;
+}
+
+.header > .search-bar > .filter > .inputs > .min-input{
+  gap: 9px;
+  margin-bottom: 5px;
+}
+
+.header > .search-bar > .filter > .inputs > .min-input input[type=number], .max-input input[type=number]{
+  border: none;
+  max-width: 5rem;
+  border-radius: 5px;
+  background-color: #ededed;
+  outline: none;
+  font-size: 15px;
+  padding: 1px 5px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.filter-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.filter-btn i {
+  font-size: 15px;
+  background-color: #dfdede;
+  padding: 0 4px;
+  border-radius: 3px;
+  user-select: none;
+}

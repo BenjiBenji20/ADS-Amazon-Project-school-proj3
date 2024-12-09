@@ -1,0 +1,97 @@
+#carouselExampleCaptions {
+  height: 100vh;
+  background: linear-gradient(to bottom, #f0a047, rgba(255, 255, 255, 0)); /* Fade from color to transparent */
+  margin-bottom: 8rem;
+}
+
+.carousel-item img{
+  width: 70vw;
+  height: 35vh;
+  position: relative;
+  left: 12rem;
+}
+
+.carousel-content {
+  padding-top: 4.5rem;
+  width: fit-content;
+}
+
+.carousel-indicators > button {
+  display: none !important;
+}
+
+.carousel-control-next, .carousel-control-prev {
+  height: 60vh;
+}
+
+.product-container {
+  width: 80rem;
+  margin: 110px;
+  display: grid;
+  grid-template-columns: repeat(4, 3fr);
+  gap: 40px;
+}
+
+.card {
+  border: none;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.product-title-and-rating {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-title-and-rating > .title {
+  font-weight: 700;
+}
+
+.product-title-and-rating > .rating {
+  font-weight: 600;
+}
+
+.product-title-and-rating > .rating > .bi-star-fill {
+  color: gold;
+}
+
+.card-body > .description {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.card-body > .product-spec {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 8px 0px 10px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-body > .product-spec > .div {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body > .price {
+  font-size: large;
+  font-weight: 700;
+}

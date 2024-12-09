@@ -1,0 +1,70 @@
+header {
+  width: 100%;
+  padding: 10px 250px; 
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  box-sizing: border-box;
+  background-color: #232F3F;
+  color: white;
+}
+
+.logo {
+  flex: 1; 
+}
+
+.logo img {
+  height: 3.5rem;
+}
+
+.company-name {
+  flex: 3;
+  text-align: center; 
+  color: #FFC267;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #232F3F;
+  border-radius: 2px;
+}
+
+.company-name h4 {
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 0;
+  user-select: none;
+}
+
+.dropdown {
+  text-align: right; 
+  margin-left: 55px;
+  width: fit-content;
+}
+
+.user-name {
+  margin: 10px;
+  height: 20px;
+}
+
+.dropdown-toggle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+
+.sign-out-btn {
+  border: none;
+  background-color: transparent;
+  margin-left: 1rem;
+  font-size: 15px;
+}
+
+.sign-out-btn:hover {
+  color: #f9a72c;
+}
+
+.sign-out-btn > .bi-box-arrow-in-left{
+  font-size: 18px;
+  margin-right: 2px;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon PH</title>
+
+  <link rel="icon" href="/images/logo.jpg">
+
+  <!--API Links-->
+  <!--Bootstrap Links-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- CSS Linsks -->
+  <link rel="stylesheet" href="/stylesheets/header.css">
+  <link rel="stylesheet" href="/stylesheets/main.css">
+  <link rel="stylesheet" href="/stylesheets/recipient.css">
+</head>
+  <body>
+     <!-- START OF HEADER -->
+     <header>
+      <div class="logo">
+        <img src="/images/amazon-logo.png" alt="logo">
+      </div>
+
+      <div class="company-name">
+        <h4>Amazon Philippines</h4>
+      </div>
+
+      <div class="dropdown">
+        <ul class="nav nav-tabs" style="border: none;">
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" style="color: white; border: none;">
+                <i class="bi bi-person-circle" style="color: white;
+                  font-size: 25px;"></i>
+                <div class="user-name">
+                  <% if(user) { %>
+                    <p><%= user.userName %></p>
+                  <% } else { %>
+                    <p>Guest view</p>
+                  <% } %>
+                </div>
+              </a>
+              <ul class="dropdown-menu" style="border: none;">
+                <li><a class="dropdown-item" href="/product-connection">Home</a></li>
+                  <% if(user) { %>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><button type="button" class="sign-out-btn">
+                      <i class="bi bi-box-arrow-in-left"></i>Log-out
+                    </button></li>
+                  <% } else { %>
+                    <li><a class="dropdown-item" href="/sign-in-sign-up">Sign-in</a></li>
+                    <li><a class="dropdown-item" href="/sign-in-sign-up">Sign-up</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">About Us</a></li>
+                  <% } %>
+              </ul>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- END OF HEADER -->
+
+    <!-- START OF MAIN -->
+     <main>
+      <div class="header">
+        <div class="check-icon">
+          <i class="bi bi-check-circle-fill"></i>
+        </div>
+
+        <div class="greet">
+          Thank you <%= user.userName %>
+          for your purchase
+        </div>
+
+        <div class="order-details">
+          <p>We've received your order! It will be ship in 5-7 business days. Track your orders using this way bill number 0000</p>
+        </div>
+      </div>
+
+      <div class="summary">
+        <div class="order-summary">
+          Order Summary
+        </div>
+
+        <div class="full-order-details">
+          <div class="product-img">
+            <img src="/images/product-images/<%= orderedProducts.productImage %>" alt="Product Picture">
+          </div>
+          <div class="order-details">
+            <div class="order-description">
+              <span class="name"><%= orderedProducts.productName %></span>
+              <span class="description"><%= orderedProducts.productDescription %></span>
+              <span class="category"><%= orderedProducts.productCategory %></span>
+            </div>
+            <div class="order-price">
+              <span class="price">₱<%= orderedProducts.productPrice %></span>
+              <span class="shipping-cost"><% const sf = 100; %>
+                +₱<%= sf %>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grand-total">
+            <span>Total</span>
+            <span>₱<%= parseFloat(orderedProducts.productPrice) + sf %></span>
+        </div>
+      </div>
+
+      <a href="/product-connection">
+        <button type="button" class="btn btn-primary" id="home-btn">
+          Back to Home
+        </button>
+      </a>
+     </main>
+    <!-- END OF MAIN -->
+    <!-- AJAX FOR SIGN OUT REQ -->
+    <script src="/javascripts/sign-out-AJAX.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+footer {
+  background-color: #F2F8FC;
+}
+
+footer a, li {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+
+.header-icon-list {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  height: fit-content;
+  padding: 2rem 4rem;
+}
+
+.header-icon-list > .amazon, .CMU, .course-name{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-icon-list > .amazon > i, .CMU > a, .course-name > a {
+  font-size: 3rem;
+  font-weight: 600;
+  width: fit-content;
+}
+
+footer > .body {
+  display: flex;
+  padding: 3rem 3rem 0rem 3rem;
+}
+
+footer > .body > .tech-used-list {
+  font-size: 15px;
+}
+
+footer > .body > .tech-used-list > .list{
+  padding: 0;
+}
+
+footer > .body > .content {
+  margin-left: 2rem;
+}
+
+footer > .body > .content > .contact-icon {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+footer > .body > .content > .contact-icon i {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+footer > .body > .content > .contact-icon .bi-facebook {
+  color: #3b5998;
+}
+
+footer > .body > .content > .contact-icon .bi-instagram {
+  color: #f0337b;
+}
+
+footer > .body > .content > .contact-icon .bi-twitter {
+  color: #1DA1F2;
+}
+
+footer > .body > .content > .contact-icon .bi-linkedin {
+  color: #0A66C2;
+}
+
+footer > .body > .content > .par-text {
+  font-size: 15px;
+  text-align: start;
+}
+
+footer > .body > .content > .developer-name-list ul {
+  font-size: 15px;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+

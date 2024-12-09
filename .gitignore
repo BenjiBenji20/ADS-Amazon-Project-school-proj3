@@ -1,0 +1,9 @@
+#ignore env file
+.env
+
+#ignore databases
+database/*.csv
+database/*sql
+
+#ignore node modules
+node_modules/

@@ -1,0 +1,114 @@
+main {
+  background-color: #eaeaea;
+  padding: 3rem 15rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 89vh;
+}
+
+main > .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+}
+
+main > .header i {
+  color: #f0a047;
+  font-size: 4rem;
+}
+
+main > .header > .greet {
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+main > .header > .order-details {
+  text-align: center;
+}
+
+main > .summary {
+  width: 70%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 15px;
+  background-color: #ffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+main > .summary > .order-summary {
+  font-size: 23px;
+  font-weight: 500;
+  margin-bottom: 13px;
+}
+
+main > .summary > .full-order-details > .product-img img{
+  height: 4rem;
+  border-radius: 2px;
+}
+
+main > .summary > .full-order-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid #cecece;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 13px;
+}
+
+main > .summary > .full-order-details > .order-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 15px;
+  width: 87%;
+}
+
+main > .summary > .full-order-details > .order-details > .order-description{
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  line-height: 1.1rem;
+}
+
+main > .summary > .full-order-details > .order-details > .order-description > .name{
+  font-weight: 500;
+}
+
+main > .summary > .full-order-details > .order-details > .order-price {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+
+main > .summary > .full-order-details > .order-details > .order-price > .shipping-cost {
+  font-size: 13px;
+}
+
+main > .summary > .grand-total {
+  border-top: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 2rem;
+  font-weight: 600;
+}
+
+main > a > .btn-primary {
+  background-color: #FFC267;
+  border-color: #FFC267;
+}
+
+main > a > .btn-primary:hover {
+  background-color: #f0a047;
+  border-color: #f0a047;
+}
+
+main > a > .btn-primary:active {
+  background-color: #f0a047;
+  border-color: #f0a047;
+}

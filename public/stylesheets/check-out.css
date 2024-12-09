@@ -1,0 +1,263 @@
+.container {
+  height: 100vh;
+  align-items: center;
+  padding:30px 80px;
+}
+
+.breadcrumb {
+  background-color: #f0a047;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  display: inline-block;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  width: 20rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.steps {
+  display: flex;
+  margin-bottom: 30px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.steps div {
+  flex: 1;
+  background-color: #FFC267;
+  padding: 10px;
+  text-align: center;
+  color: #ffff;
+  font-weight: 500;
+}
+.steps .active {
+  background-color: #f0a047;
+}
+
+.form-container {
+  display: flex;
+}
+
+.form-container .form {
+  flex: 2;
+  background-color: #ffff;
+  padding: 30px 50px;
+  margin-right: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-container .form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  height: 4rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #efefef;
+  outline: none;
+}
+
+.province-zip-code {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#province {
+  margin-right: 22px;
+}
+
+.form-container .form .phone-input {
+  display: flex;
+}
+
+.form-container .form .phone-input input {
+  flex: 1;
+}
+
+#sendSMS {
+  border: 4px solid #ffff;
+  background-color: #efefef;
+  color: #ffff;
+  height: 4rem;
+  border-radius: 5px;
+  margin-left: 2px;
+
+  pointer-events: none;
+  user-select: none;
+}
+
+.otp-input {
+  display: flex;
+  flex-direction: row;
+}
+
+#verifyOTP {
+  border: 4px solid #ffff;
+  background-color: #efefef;
+  color: #ffff;
+  height: 4rem;
+  width: 6.8rem;
+  border-radius: 5px;
+  margin-left: 2px;
+
+  pointer-events: none;
+  user-select: none;
+}
+
+.form-container .form .next-button, .form-container .form .buy-button {
+  background-color: #f0a047;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+  height: 4rem;
+  cursor: pointer;
+  color: white;
+  width: 100%;
+  border: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-container .summary {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  flex: 1;
+  background-color: #ffff;
+  padding: 20px;
+}
+
+.form-container .summary-image-product-name {
+  display: flex;
+  height: fit-content;
+  margin-bottom: 20px;
+}
+
+.form-container .summary h4 {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.order-summary-divider {
+  border: 0.5px solid black;
+  margin-bottom: 20px;
+}
+
+.form-container .summary-image-product-name p {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: start;
+}
+
+.form-container .summary-image-product-name span {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.form-container .summary-image-product-name .divider {
+  height: 10px;
+  border-radius: 3px;
+  background-color: #f0a047;
+}
+
+.form-container .summary-image-product-name div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.form-container .summary .image-placeholder {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.bi-star-fill {
+  color: gold;
+}
+
+.form-container .summary .image-placeholder img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.form-container .summary .text-placeholder {
+  height: fit-content;
+  margin-bottom: 10px;
+}
+
+.form-container .summary .text-placeholder > .product-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+} 
+
+.form-container .summary .text-placeholder > .product-details span {
+  font-size: 14px;
+}
+
+.summary > .grand-total-summary  {
+  margin-bottom: 10px;
+}
+
+.summary > .grand-total-summary > .header, .total-item-cost, .grand-total {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.summary > .grand-total-summary {
+  font-size: 14px;
+}
+
+.summary > .grand-total-summary > .divider {
+  border-bottom: 0.5px solid black;
+}
+
+.btn-danger {
+  height: 2rem;
+  padding: 0 10px;
+  font-size: 15px;
+}
+
+/* HIDE THE CONTAINER */
+.hidden { 
+  display: none;
+}
+
+.payment-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.payment-buttons .button {
+  flex: 1;
+  border: none;
+  background-color: #f0a047;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 10px;
+  color: white;
+  font-size: 20px;
+}
+
+.payment-buttons .button:last-child {
+  margin-right: 0;
+}
+
+.buy-button button{
+  font-size: 20px;
+  height: 40px;
+}
+
+
+
+

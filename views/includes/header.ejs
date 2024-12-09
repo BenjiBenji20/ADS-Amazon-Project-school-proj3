@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+
+  <!--API Links-->
+  <!--Bootstrap Links-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- CSS Linsks -->
+  <link rel="stylesheet" href="/stylesheets/header.css">
+  <link rel="stylesheet" href="/stylesheets/main.css">
+</head>
+  <body>
+    <!-- START OF HEADER -->
+    <header>
+      <div class="logo">
+        <img src="/images/amazon-logo.png" alt="logo">
+      </div>
+
+      <div class="company-name">
+        <h4>Amazon Philippines</h4>
+      </div>
+
+      <div class="dropdown">
+        <ul class="nav nav-tabs" style="border: none;">
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" style="color: white; border: none;">
+                <i class="bi bi-person-circle" style="color: white;
+                  font-size: 25px;"></i>
+                <div class="user-name">
+                  <% if(user) { %>
+                    <p><%= user.userName %></p>
+                  <% } else { %>
+                    <p>Guest view</p>
+                  <% } %>
+                </div>
+              </a>
+              <ul class="dropdown-menu" style="border: none;">
+                <li><a class="dropdown-item" href="/product-connection">Home</a></li>
+                  <% if(user) { %>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><button type="button" class="sign-out-btn">
+                      <i class="bi bi-box-arrow-in-left"></i>Log-out
+                    </button></li>
+                  <% } else { %>
+                    <li><a class="dropdown-item" href="/sign-in-sign-up">Sign-in</a></li>
+                    <li><a class="dropdown-item" href="/sign-in-sign-up">Sign-up</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">About Us</a></li>
+                  <% } %>
+              </ul>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- END OF HEADER -->
+
+    <!-- JS FOR AJAX REQUEST FOR FILTERING PRODUCTS -->
+    <script src="/javascripts/sign-out-AJAX.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
